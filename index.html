@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search App</title>
+
+    <link rel="stylesheet" href="index.css">
+
+   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+   
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>  <nav>
+
+        <div class="logo">
+             MovieFinder
+        </div>
+
+        <div class="search-area">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search movies..."
+                autocomplete="off">
+
+            <button id="searchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <div id="suggestions"></div>
+
+        </div>
+
+        <div class="nav-buttons">
+            <button id="themeBtn" title="Dark Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button id="favoriteBtn" title="Favorites">
+                <i class="fa-solid fa-heart"></i>
+            </button>
+            <button id="historyBtn" title="Search History">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+            </button>
+
+        </div>
+
+    </nav>
+    <main>
+
+        <h2 class="heading">
+            Search Your Favourite Movies
+        </h2>
+
+        <!-- Loading Spinner -->
+
+        <div id="loader" class="loader">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+        <div class="card" id="movieContainer">
+
+            <h2 class="welcome">
+                 Start by searching for a movie.
+            </h2>
+
+        </div>
+
+    </main>
+     <div class="popup" id="favoritesPopup">
+
+        <div class="popup-content">
+
+            <div class="popup-header">
+
+                <h2> Favorite Movies</h2>
+
+                <button class="closeBtn" id="closeFavorite">
+                    &times;
+                </button>
+
+            </div>
+
+            <div id="favoriteList">
+
+                <p>No favorite movies yet.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="popup" id="historyPopup">
+
+        <div class="popup-content">
+
+            <div class="popup-header">
+
+                <h2>Search History</h2>
+
+                <button class="closeBtn" id="closeHistory">
+                    &times;
+                </button>
+
+            </div>
+
+            <div id="historyList">
+
+                <p>No searches yet.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <p>
+            Movie Search App © 2026 |
+            Powered by OMDb API
+        </p>
+
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
