@@ -38,17 +38,26 @@ Movie Search App/
 
 ## How to Run
 
-1. Download or clone the repository.
+1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/movie-search-app.git
+git clone https://github.com/saviAshetty/MovieAppJs.git
 ```
 
-2. Open the project folder in Visual Studio Code.
+2. Navigate to the project folder:
 
-3. Install the Live Server extension.
+```bash
+cd MovieAppJs
+```
 
-4. Right-click **index.html** and select **Open with Live Server**.
+3. Open the project in Visual Studio Code.
+
+4. Install the **Live Server** extension (if not already installed).
+
+5. Right-click **index.html** and select **Open with Live Server**.
+
+6. Search for any movie to view its details.
+
 ## Future Improvements
 
 - Movie trailer integration
