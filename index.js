@@ -1,12 +1,5 @@
-// ==============================
-// OMDb API Key
-// ==============================
 
 const API_KEY = "17f8307a";
-
-// ==============================
-// Elements
-// ==============================
 
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
@@ -16,10 +9,6 @@ const loader = document.getElementById("loader");
 
 const suggestions = document.getElementById("suggestions");
 
-// ==============================
-// Loading
-// ==============================
-
 function showLoader() {
     loader.style.display = "block";
 }
@@ -27,10 +16,6 @@ function showLoader() {
 function hideLoader() {
     loader.style.display = "none";
 }
-
-// ==============================
-// Search Movie
-// ==============================
 
 async function searchMovie(movieName) {
 
@@ -75,10 +60,6 @@ async function searchMovie(movieName) {
 
 }
 
-// ==============================
-// Display Movie
-// ==============================
-
 function displayMovie(movie){
 
     let rating="N/A";
@@ -120,7 +101,7 @@ function displayMovie(movie){
             <button class="favoriteBtn"
             onclick="addFavorite('${movie.imdbID}')">
 
-                ❤️ Add Favorite
+                Add Favorite
 
             </button>
 
@@ -132,19 +113,11 @@ function displayMovie(movie){
 
 }
 
-// ==============================
-// Search Button
-// ==============================
-
 searchBtn.addEventListener("click",()=>{
 
     searchMovie(searchInput.value);
 
 });
-
-// ==============================
-// Enter Key
-// ==============================
 
 searchInput.addEventListener("keypress",(e)=>{
 
@@ -155,10 +128,6 @@ searchInput.addEventListener("keypress",(e)=>{
     }
 
 });
-
-// ==============================
-// Search Suggestions
-// ==============================
 
 searchInput.addEventListener("input", async ()=>{
 
@@ -210,10 +179,6 @@ searchInput.addEventListener("input", async ()=>{
 
 });
 
-// ==============================
-// Search History
-// ==============================
-
 function saveHistory(movie){
 
     let history=
@@ -235,9 +200,6 @@ function saveHistory(movie){
     );
 
 }
-// ==============================
-// FAVORITES (Local Storage)
-// ==============================
 
 function addFavorite(imdbID) {
 
@@ -262,10 +224,6 @@ function addFavorite(imdbID) {
     }
 
 }
-
-// ==============================
-// Favorite Popup
-// ==============================
 
 const favoriteBtn =
     document.getElementById("favoriteBtn");
@@ -338,10 +296,6 @@ async function showFavorites() {
 
 }
 
-// ==============================
-// Remove Favorite
-// ==============================
-
 function removeFavorite(id) {
 
     let favorites =
@@ -357,10 +311,6 @@ function removeFavorite(id) {
     showFavorites();
 
 }
-
-// ==============================
-// Search History Popup
-// ==============================
 
 const historyBtn =
     document.getElementById("historyBtn");
@@ -430,10 +380,6 @@ function searchFromHistory(movie) {
 
 }
 
-// ==============================
-// DARK MODE
-// ==============================
-
 const themeBtn =
     document.getElementById("themeBtn");
 
@@ -469,9 +415,6 @@ themeBtn.addEventListener("click", () => {
     }
 
 });
-// ====================================
-// Close suggestions when clicking outside
-// ====================================
 
 document.addEventListener("click", function (e) {
 
@@ -484,10 +427,6 @@ document.addEventListener("click", function (e) {
 });
 
 
-// ====================================
-// Clear Search History
-// ====================================
-
 function clearHistory() {
 
     localStorage.removeItem("history");
@@ -497,10 +436,6 @@ function clearHistory() {
 
 }
 
-
-// ====================================
-// Add Clear History Button
-// ====================================
 
 historyBtn.addEventListener("dblclick", () => {
 
@@ -512,10 +447,6 @@ historyBtn.addEventListener("dblclick", () => {
 
 });
 
-
-// ====================================
-// Close Popup When Clicking Background
-// ====================================
 
 window.onclick = function(e){
 
@@ -534,17 +465,13 @@ window.onclick = function(e){
 }
 
 
-// ====================================
-// Default Welcome Message
-// ====================================
-
 window.onload = function(){
 
     movieContainer.innerHTML = `
 
         <h2 class="welcome">
 
-            🍿 Search your favourite movie
+             Search your favourite movie
 
         </h2>
 
