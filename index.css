@@ -1,0 +1,470 @@
+/* ===========================
+   Google Font
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#222;
+    transition:.3s;
+}
+
+/* ===========================
+   Dark Mode
+=========================== */
+
+body.dark{
+    background:#111827;
+    color:#fff;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+
+nav{
+    width:100%;
+    height:80px;
+    background:#111827;
+    color:#fff;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 8%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+}
+
+.search-area{
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.search-area input{
+
+    width:330px;
+    padding:12px;
+
+    border:none;
+    outline:none;
+
+    border-radius:8px 0 0 8px;
+    font-size:16px;
+}
+
+.search-area button{
+
+    padding:12px 18px;
+    border:none;
+
+    background:#ff9800;
+    color:white;
+
+    cursor:pointer;
+    border-radius:0 8px 8px 0;
+}
+
+.search-area button:hover{
+    background:#e68900;
+}
+
+/* ===========================
+Suggestions
+=========================== */
+
+#suggestions{
+
+    position:absolute;
+    top:52px;
+
+    width:330px;
+
+    background:#fff;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+    display:none;
+}
+
+#suggestions div{
+
+    padding:12px;
+
+    cursor:pointer;
+}
+
+#suggestions div:hover{
+
+    background:#eeeeee;
+}
+
+/* ===========================
+Buttons
+=========================== */
+
+.nav-buttons{
+
+    display:flex;
+    gap:12px;
+}
+
+.nav-buttons button{
+
+    width:45px;
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:white;
+
+    color:#222;
+
+    font-size:18px;
+
+    transition:.3s;
+}
+
+.nav-buttons button:hover{
+
+    transform:scale(1.08);
+}
+
+body.dark .nav-buttons button{
+
+    background:#374151;
+    color:white;
+}
+
+/* ===========================
+Main
+=========================== */
+
+main{
+
+    width:90%;
+    margin:auto;
+
+    padding:40px 0;
+}
+
+.heading{
+
+    text-align:center;
+
+    margin-bottom:30px;
+}
+
+.welcome{
+
+    text-align:center;
+
+    color:gray;
+
+    margin-top:70px;
+}
+
+/* ===========================
+Movie Card
+=========================== */
+
+.card{
+
+    display:flex;
+    justify-content:center;
+}
+
+.movieCard{
+
+    width:1000px;
+
+    display:flex;
+
+    gap:30px;
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+body.dark .movieCard{
+
+    background:#1f2937;
+}
+
+.movieCard img{
+
+    width:300px;
+
+    border-radius:10px;
+}
+
+.cardText{
+
+    flex:1;
+}
+
+.cardText h1{
+
+    margin-bottom:15px;
+}
+
+.cardText p{
+
+    margin:12px 0;
+}
+
+.cardText span{
+
+    color:#666;
+}
+
+body.dark .cardText span{
+
+    color:#d1d5db;
+}
+
+.cardText a{
+
+    display:inline-block;
+
+    margin:15px 0;
+
+    padding:8px 18px;
+
+    background:#ff5722;
+
+    color:white;
+
+    border-radius:5px;
+
+    text-decoration:none;
+}
+
+/* ===========================
+Loader
+=========================== */
+
+.loader{
+
+    display:none;
+
+    text-align:center;
+
+    margin-top:70px;
+}
+
+.spinner{
+
+    width:55px;
+    height:55px;
+
+    border:6px solid #ddd;
+    border-top:6px solid orange;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+    margin:auto;
+}
+
+@keyframes spin{
+
+    100%{
+
+        transform:rotate(360deg);
+    }
+}
+
+/* ===========================
+Popup
+=========================== */
+
+.popup{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.6);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+}
+
+.popup-content{
+
+    width:450px;
+
+    max-height:550px;
+
+    overflow:auto;
+
+    background:white;
+
+    border-radius:10px;
+
+    padding:20px;
+}
+
+body.dark .popup-content{
+
+    background:#1f2937;
+}
+
+.popup-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:15px;
+}
+
+.closeBtn{
+
+    border:none;
+
+    background:red;
+
+    color:white;
+
+    width:35px;
+
+    height:35px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+#favoriteList div,
+#historyList div{
+
+    padding:10px;
+
+    border-bottom:1px solid #ddd;
+
+    cursor:pointer;
+}
+
+#favoriteList div:hover,
+#historyList div:hover{
+
+    background:#f1f1f1;
+}
+
+/* ===========================
+Footer
+=========================== */
+
+footer{
+
+    margin-top:70px;
+
+    background:#111827;
+
+    color:white;
+
+    text-align:center;
+
+    padding:18px;
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:900px){
+
+    nav{
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:20px;
+    }
+
+    .search-area{
+
+        margin:15px 0;
+    }
+
+    .movieCard{
+
+        flex-direction:column;
+
+        width:95%;
+
+        text-align:center;
+    }
+
+    .movieCard img{
+
+        width:100%;
+    }
+}
+
+@media(max-width:500px){
+
+    .search-area input{
+
+        width:220px;
+    }
+
+    #suggestions{
+
+        width:220px;
+    }
+
+    .popup-content{
+
+        width:90%;
+    }
+
+    .nav-buttons{
+
+        margin-top:10px;
+    }
+
+}
